@@ -14,6 +14,7 @@ RUN apt-get install -y grafana
 # install some diagnostic tools
 #RUN apt-get install -y vim procps net-tools curl
 
+COPY ./etc/grafana/grafana.ini /etc/grafana/grafana.ini
 COPY ./run.sh /run.sh
 RUN chmod a+x /run.sh
 
